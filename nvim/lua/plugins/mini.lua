@@ -1,5 +1,5 @@
 return {
-  "echasnovski/mini.nvim",
+  "nvim-mini/mini.nvim",
   version = "*",
   specs = {
     { "nvim-tree/nvim-web-devicons", enabled = false, optional = true },
