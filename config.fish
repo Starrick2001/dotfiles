@@ -10,3 +10,7 @@ end
 # pnpm end
 set -gx EDITOR nvim
 set -gx VISUAL nvim
+
+function fish_greeting
+    fastfetch
+end
