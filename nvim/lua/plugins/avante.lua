@@ -1,16 +1,16 @@
 return {
   "yetone/avante.nvim",
   event = "VeryLazy",
-  enabled = false,
+  enabled = true,
   version = false, -- Never set this value to "*"! Never!
   opts = {
     -- add any opts here
     -- for example
-    provider = "ollama",
-    ollama = {
-      endpoint = "http://127.0.0.1:11434", -- Note that there is no /v1 at the end.
-      model = "codegemma:2b",
-    },
+    provider = "gemini",
+    -- ollama = {
+    --   endpoint = "http://127.0.0.1:11434", -- Note that there is no /v1 at the end.
+    --   model = "codegemma:2b",
+    -- },
     -- openai = {
     --   endpoint = "https://api.openai.com/v1",
     --   model = "gpt-4o", -- your desired model (or use gpt-4o, etc.)

@@ -70,7 +70,6 @@ return {
         },
         ghost_text = { enabled = true },
       },
-
       -- Default list of enabled providers defined so that you can extend it
       -- elsewhere in your config, without redefining it, due to `opts_extend`
       sources = {
@@ -79,19 +78,22 @@ return {
           "path",
           "snippets",
           "buffer",
+          -- For manual completion only, remove 'minuet' from default
           -- "minuet",
           -- Avante
           -- "avante_commands",
           -- "avante_mentions",
           -- "avante_files",
         },
-        -- For manual completion only, remove 'minuet' from default
         providers = {
           minuet = {
             name = "minuet",
             module = "minuet.blink",
             async = true,
-            score_offset = 8, -- Gives minuet higher priority among suggestions
+            -- Should match minuet.config.request_timeout * 1000,
+            -- since minuet.config.request_timeout is in seconds
+            timeout_ms = 3000,
+            score_offset = 50, -- Gives minuet higher priority among suggestions
           },
           -- Avante
           -- avante_commands = {
@@ -113,14 +115,14 @@ return {
           --   opts = {},
           -- },
         },
-        -- Codeium
-        -- compat = { "codeium" },
-        -- Avante
-        -- compat = {
-        --   "avante_commands",
-        --   "avante_mentions",
-        --   "avante_files",
-        -- },
+        compat = {
+          -- Codeium
+          -- "codeium"
+          -- Avante
+          -- "avante_commands",
+          -- "avante_mentions",
+          -- "avante_files",
+        },
       },
     },
     opts_extend = {
