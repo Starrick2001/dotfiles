@@ -1,0 +1,36 @@
+lastupdatecheck: 0
+recentrepos:
+    - /Users/apple/100-exercises-to-learn-rust
+    - /Users/apple/tridentity/tridentity-be
+    - /Users/apple/my-nest-app
+    - /Users/apple/tridentity/trident-communication-service
+    - /Users/apple/.config/nvim
+    - /Users/apple/tridentity/trident-communication-service-be-sdk
+    - /Users/apple/tridentity/trifood-fe
+    - /Users/apple/tridentity/oidc-express
+    - /Users/apple/tridentity/trifood-search-service
+    - /Users/apple/tridentity/mic-nest
+    - /Users/apple/tridentity/yas
+    - /Users/apple/ultimate-nest
+    - /Users/apple/tridentity/asd
+    - /Users/apple/test-spring-boot
+    - /Users/apple/spring-boot-2-oauth2-resource-server
+    - /Users/apple/.local/share/nvim/lazy/LuaSnip
+    - /Users/apple/tridentity/tri-event
+    - /Users/apple/tridentity/trifood-2
+    - /Users/apple/tridentity/test2
+    - /Users/apple/lazygit
+startuppopupversion: 5
+lastversion: 0.44.1
+customcommandshistory:
+    - q
+    - qa
+    - wqa
+hidecommandlog: false
+ignorewhitespaceindiffview: false
+diffcontextsize: 8
+renamesimilaritythreshold: 50
+localbranchsortorder: recency
+remotebranchsortorder: alphabetical
+gitlogorder: topo-order
+gitlogshowgraph: always
