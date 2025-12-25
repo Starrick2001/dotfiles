@@ -42,11 +42,11 @@ gui:
     searchingActiveBorderColor:
       - "#f9e2af"
 git:
-  paging:
-    colorArg: always
-    # useConfig: false
-    pager: delta --dark --paging=never
-    # pager: delta --dark --paging=never --show-syntax-themes
+  pagers:
+    - colorArg: always
+      # useConfig: false
+      pager: delta --dark --paging=never
+      # pager: delta --dark --paging=never --show-syntax-themes
   commitPrefixes:
     membership-service: # This is repository folder name
       - pattern: "^\\w+\\/(\\w+-\\w+).*"
