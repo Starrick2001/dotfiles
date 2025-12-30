@@ -15,7 +15,7 @@ require("lazy").setup({
     -- { import = "lazyvim.plugins.extras.lang.json" },
     -- { import = "lazyvim.plugins.extras.ui.mini-animate" },
     { import = "lazyvim.plugins.extras.formatting.prettier" },
-    -- { import = "lazyvim.plugins.extras.linting.eslint" },
+    { import = "lazyvim.plugins.extras.linting.eslint" },
     --{ import = "lazyvim.plugins.extras.linting.nvim-lint" },
     -- { import = "lazyvim.plugins.extras.coding.tabnine" },
     { import = "lazyvim.plugins.extras.ui.edgy" },
@@ -66,10 +66,10 @@ require("lazy").setup({
     -- { "tpope/vim-commentary" },
     -- { "tpope/vim-repeat" },
     -- { "tpope/vim-sleuth" },
-    {
-      "nvim-telescope/telescope.nvim",
-      branch = "0.1.x",
-      dependencies = { "nvim-lua/plenary.nvim" },
-    },
+    -- {
+    --   "nvim-telescope/telescope.nvim",
+    --   branch = "0.1.x",
+    --   dependencies = { "nvim-lua/plenary.nvim" },
+    -- },
   },
 })
