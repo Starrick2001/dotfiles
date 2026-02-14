@@ -70,7 +70,7 @@ ZSH_THEME="kphoen"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git autoenv redis-cli node nvm npm archlinux themes z zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git autoenv redis-cli node nvm npm archlinux themes z zsh-autosuggestions fast-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -106,3 +106,11 @@ source ~/.autoenv/activate.sh
 
 # opencode
 export PATH=/home/starrick/.opencode/bin:$PATH
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export EDITOR=nvim
+export VISUAL=nvim
+
