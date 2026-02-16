@@ -5,6 +5,7 @@ return {
     priority = 1000,
     config = function()
       require("catppuccin").setup({
+        auto_integrations = true,
         flavour = "mocha",
         background = {
           light = "latte",
