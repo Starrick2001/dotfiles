@@ -21,9 +21,9 @@ return {
       -- },
       stream = true,
       api_key = "GEMINI_API_KEY",
-      model = "gemini-2.0-flash",
       provider_options = {
         gemini = {
+          model = "gemini-2.5-flash",
           -- model = "gemini-2.0-flash",
           -- system = "see [Prompt] section for the default value",
           -- few_shots = "see [Prompt] section for the default value",
