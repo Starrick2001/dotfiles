@@ -1,10 +1,32 @@
-# /bin/bash
-ln -s ~/dotfiles/nvim/ ~/.config/nvim
-ln -s ~/dotfiles/config.fish ~/.config/fish/config.fish
-ln -s ~/dotfiles/kitty.conf ~/.config/kitty/kitty.conf
-ln -s ~/dotfiles/yazi/yazi.toml ~/.config/yazi/yazi.toml
-ln -s ~/dotfiles/zsh/.zshrc ~/
-# MacOS
-ln -s ~/dotfiles/lazygit/config.yml ~/Library/Application\ Support/lazygit/config.yml
-# Linux
-ln -s ~/dotfiles/lazygit/config.yml ~/.config/lazygit/config.yml
+#!/usr/bin/env bash
+set -euo pipefail
+
+DOTFILES_DIR="${DOTFILES_DIR:-$HOME/dotfiles}"
+
+link_file() {
+  local src="$1"
+  local dest="$2"
+  mkdir -p "$(dirname "$dest")"
+  ln -sfn "$src" "$dest"
+}
+
+link_file "$DOTFILES_DIR/nvim" "$HOME/.config/nvim"
+link_file "$DOTFILES_DIR/config.fish" "$HOME/.config/fish/config.fish"
+link_file "$DOTFILES_DIR/kitty.conf" "$HOME/.config/kitty/kitty.conf"
+link_file "$DOTFILES_DIR/yazi/yazi.toml" "$HOME/.config/yazi/yazi.toml"
+link_file "$DOTFILES_DIR/zsh/.zshrc" "$HOME/.zshrc"
+
+case "$(uname -s)" in
+  Darwin)
+    link_file "$DOTFILES_DIR/lazygit/config.yml" \
+      "$HOME/Library/Application Support/lazygit/config.yml"
+    ;;
+  Linux)
+    link_file "$DOTFILES_DIR/lazygit/config.yml" \
+      "$HOME/.config/lazygit/config.yml"
+    ;;
+  *)
+    echo "Unsupported OS: $(uname -s)" >&2
+    exit 1
+    ;;
+esac
