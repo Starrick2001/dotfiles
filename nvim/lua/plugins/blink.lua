@@ -78,6 +78,9 @@ return {
           "path",
           "snippets",
           "buffer",
+          "cmdline",
+          "omni",
+          "lazydev",
           -- For manual completion only, remove 'minuet' from default
           -- "minuet",
           -- Avante
