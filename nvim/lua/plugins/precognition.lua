@@ -2,8 +2,8 @@ return {
   "tris203/precognition.nvim",
   --event = "VeryLazy",
   opts = {
-    -- startVisible = true,
-    -- debounceMs = 0,
+    startVisible = false,
+    debounceMs = 1000,
     -- showBlankVirtLine = true,
     -- highlightFullVirtLine = false,
     -- highlightColor = { link = "Comment" },
