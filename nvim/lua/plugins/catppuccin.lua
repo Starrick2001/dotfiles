@@ -45,6 +45,9 @@ return {
           treesitter = true,
           treesitter_context = true,
           which_key = true,
+          snacks = {
+            enabled = true,
+          },
         },
       })
     end,

@@ -2,6 +2,6 @@
 require("config.lazy")
 
 -- Colorscheme
-vim.cmd.colorscheme("catppuccin")
+vim.cmd.colorscheme("catppuccin-nvim")
 -- Blamer
 vim.g.blamer_enabled = true
