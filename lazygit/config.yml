@@ -18,7 +18,8 @@ gui:
   splitDiff: auto
   # Window border style.
   # One of 'rounded' (default) | 'single' | 'double' | 'hidden'
-  border: double
+  border: rounded
+  nerdFontsVersion: "3"
   theme:
     activeBorderColor:
       - "#94e2d5"
