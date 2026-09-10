@@ -1,0 +1,19 @@
+# Throwaway Arch container to test deps.sh / install.sh without touching
+# your real machine.
+#
+#   docker compose build
+#   docker compose run --rm archtest
+#   ./deps.sh && ./install.sh          # inside the container
+#
+# The repo is bind-mounted, so edits on the host show up immediately —
+# no rebuild needed between runs. Package/tool state lives only in the
+# container; `docker compose down` (or just letting --rm clean up) resets it.
+services:
+  archtest:
+    build:
+      context: .
+      dockerfile: test/Dockerfile
+    volumes:
+      - .:/home/tester/dotfiles
+    stdin_open: true
+    tty: true
