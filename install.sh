@@ -32,12 +32,12 @@ link_file() {
 }
 
 link_file "$DOTFILES_DIR/nvim" "$HOME/.config/nvim"
-link_file "$DOTFILES_DIR/config.fish" "$HOME/.config/fish/config.fish"
+link_file "$DOTFILES_DIR/fish/config.fish" "$HOME/.config/fish/config.fish"
 link_file "$DOTFILES_DIR/kitty.conf" "$HOME/.config/kitty/kitty.conf"
 link_file "$DOTFILES_DIR/yazi/yazi.toml" "$HOME/.config/yazi/yazi.toml"
 link_file "$DOTFILES_DIR/zsh/.zshrc" "$HOME/.zshrc"
 link_file "$DOTFILES_DIR/.bashrc" "$HOME/.bashrc"
-link_file "$DOTFILES_DIR/.gitconfig" "$HOME/.gitconfig"
+link_file "$DOTFILES_DIR/git/.gitconfig" "$HOME/.gitconfig"
 link_file "$DOTFILES_DIR/tmux/.tmux.conf" "$HOME/.tmux.conf"
 link_file "$DOTFILES_DIR/wezterm/.wezterm.lua" "$HOME/.wezterm.lua"
 

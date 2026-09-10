@@ -10,8 +10,8 @@ return {
       desc = "[F]ormat buffer",
     },
   },
-  opts = function()
-    require("conform").setup({
+  opts = function(_, opts)
+    return vim.tbl_deep_extend("force", opts or {}, {
       notify_on_error = true,
       stop_after_first = true,
       formatters_by_ft = {

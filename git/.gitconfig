@@ -1,0 +1,11 @@
+[include]
+  path = ~/.gitconfig.local
+[core]
+  pager = delta
+[interactive]
+  diffFilter = delta --color-only --features=interactive
+[delta]
+  navigate = true
+  side-by-side = true
+[pull]
+	rebase = true

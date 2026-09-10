@@ -43,10 +43,8 @@ gui:
       - "#f9e2af"
 git:
   diffRenderers:
-    - colorArg: always
-      # useConfig: false
-      command: delta --dark --paging=never
-      # pager: delta --dark --paging=never --show-syntax-themes
+    - command: delta --dark --paging=never --features=interactive
+      colorArg: always
   commitPrefix:
     - pattern: "^\\w+\\/(\\w+-\\w+).*"
       replace: "$1 "

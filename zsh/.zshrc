@@ -82,11 +82,11 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='nvim'
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim' VISUAL=vim
+else
+  export EDITOR='nvim' VISUAL=nvim
+fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch $(uname -m)"
@@ -105,7 +105,7 @@ source $ZSH/oh-my-zsh.sh
 source ~/.autoenv/activate.sh
 
 # opencode
-export PATH=/home/starrick/.opencode/bin:$PATH
+export PATH=$HOME/.opencode/bin:$PATH
 
 export PATH=$HOME/.local/bin:$PATH
 
@@ -113,19 +113,21 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-export EDITOR=nvim
-export VISUAL=nvim
-
-
 # bun completions
-[ -s "/home/starrick/.bun/_bun" ] && source "/home/starrick/.bun/_bun"
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
 
-alias open='xdg-open'
+[[ $OSTYPE == linux* ]] && alias open='xdg-open'
+
+# Added by Antigravity IDE
+export PATH="$HOME/.antigravity-ide/antigravity-ide/bin:$PATH"
+
+# Added by Antigravity CLI installer
+export PATH="$HOME/.local/bin:$PATH"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
